@@ -136,6 +136,7 @@ textarea{
   border-radius: 5px;
   border: 1px solid blue;
   padding-left: 5px;
+  padding: 10px; color: black;
   outline-color: green;
 }
 
