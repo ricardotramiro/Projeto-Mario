@@ -82,7 +82,10 @@ button:active {
 }
 
 video {
-  width: 100vw;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 h1 {
@@ -117,15 +120,16 @@ p {
   gap: 15px;
   flex-direction: column;
   position: fixed;
-  top: 0;
+  top: 30%;
+  left: -300px;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 30px;
 }
 
 input {
   height: 40px;
-  border-radius: 5px;
-  border: 1px solid blue;
+  border-radius: 15px;
+  border: 2px solid blue;
   padding-left: 5px;
   outline-color: green;
 }
@@ -133,8 +137,8 @@ input {
 textarea{
   width: 270px;
   height: 100px;
-  border-radius: 5px;
-  border: 1px solid blue;
+  border-radius: 15px;
+  border: 2px solid blue;;
   padding-left: 5px;
   padding: 10px; color: black;
   outline-color: green;
@@ -152,4 +156,13 @@ textarea{
   font-weight: bold;
   margin-inline:auto;
   
+}
+
+.mascara-formulario {
+  position: fixed;
+  top: 0%;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%); ;
+
 }
