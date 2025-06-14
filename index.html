@@ -7,7 +7,7 @@
     <title>Projeto Mario</title>
   </head>
   <body>
-    <div class="mascara-formulario"></div>
+    <div class="mascara-formulario" onclick="esconderFormulario()"></div>
     <div class="header">
       <img
         class="imagem-header"
@@ -30,7 +30,7 @@
           Cogumelos - Mario e Luigi!
         </p>
 
-        <button onclick="cliqueiNoBotao()">Entre em contato</button>
+        <button onclick="mostrarFormulario()">Entre em contato</button>
       </div>
       <div>
         <img
@@ -50,11 +50,15 @@
     >
       <img class="link-whatsaap" src="./assets/whatsapp.png" alt="whatsaap"
     /></a>
-    <form class="formulario-fale-conosco">
-      <input placeholder="Seu nome" />
-      <input placeholder="Seu telefone" />
-      <textarea placeholder="Digite seu problema aqui"></textarea>
-      <button class="botao">Pedir Orçamento</button>
+    <form
+      class="formulario-fale-conosco"
+      action="https://formcarry.com/s/6DmtIDt9WPI"
+      method="POST"
+      enctype="multipart/form-data">
+      <input placeholder="Seu nome" type="text" name="nome"/>
+      <input placeholder="Seu telefone" type="tel" name="telefone"/>
+      <textarea placeholder="Digite seu problema aqui" name="duvida"></textarea>
+      <button class="botao" type="submit">Pedir Orçamento</button>
     </form>
   </body>
   <script src="script.js"></script>

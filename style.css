@@ -124,6 +124,7 @@ p {
   left: -300px;
   padding: 20px;
   border-radius: 30px;
+  transition: left 1s ease-in-out; /* Transição para o formulario aparecer devagar */
 }
 
 input {
@@ -155,6 +156,7 @@ textarea{
   text-transform: uppercase;
   font-weight: bold;
   margin-inline:auto;
+
   
 }
 
@@ -165,5 +167,5 @@ textarea{
   width: 100vw;
   height: 100vh;
   background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%); 
-
+ transition:visibility 1s ease-out; /* faz o formulario sumir devagar quando clicado na tela */
 }
