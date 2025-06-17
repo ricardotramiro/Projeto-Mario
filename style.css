@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 100vh;
+  height: 100vh;
 }
 
 .header {
@@ -17,14 +17,13 @@ body {
 
 .header img {
   height: 60px;
-transform: translateX();
+  transform: translateX();
 }
 
 .header a {
   color: white;
   cursor: pointer;
   font-size: 24px;
-  
 }
 
 .header a:hover {
@@ -39,7 +38,7 @@ transform: translateX();
 
 button {
   color: aliceblue;
-  background-color:rgb(225, 18, 18) ;
+  background-color: rgb(225, 18, 18);
   border-radius: 50px;
   border: none;
   cursor: pointer;
@@ -80,6 +79,14 @@ button:active {
   top: 0;
   z-index: -1;
 }
+section {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  padding: 100px;
+}
 
 video {
   min-height: 100%;
@@ -101,10 +108,14 @@ p {
 .mascara {
   height: 100%;
   width: 100%;
-  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
   position: fixed;
   top: 0;
-
 }
 
 .link-whatsaap {
@@ -135,19 +146,20 @@ input {
   outline-color: green;
 }
 
-textarea{
+textarea {
   width: 270px;
   height: 100px;
   border-radius: 15px;
-  border: 2px solid blue;;
+  border: 2px solid blue;
   padding-left: 5px;
-  padding: 10px; color: black;
+  padding: 10px;
+  color: black;
   outline-color: green;
 }
 
 .botao {
-   color: aliceblue;
-  background-color:rgb(225, 18, 18) ;
+  color: aliceblue;
+  background-color: rgb(225, 18, 18);
   border-radius: 50px;
   border: none;
   cursor: pointer;
@@ -155,9 +167,7 @@ textarea{
   height: 50px;
   text-transform: uppercase;
   font-weight: bold;
-  margin-inline:auto;
-
-  
+  margin-inline: auto;
 }
 
 .mascara-formulario {
@@ -166,62 +176,95 @@ textarea{
   top: 0%;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%); 
- transition:visibility 1s ease-out; /* faz o formulario sumir devagar quando clicado na tela */
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+  transition: visibility 1s ease-out; /* faz o formulario sumir devagar quando clicado na tela */
 }
 
-@media (max-width: 1100px){
-
-h1 {
-  display: none;
+.nossos-servicos {
+  color: white;
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
 }
+
+.nossos-servicos h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.nossos-servicos ul {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+  line-height: 2;
+}
+
+.nossos-servicos li::before {
+  content: "🔧 ";
+}
+
+.nossos-servicos p {
+  font-size: 18px;
+  max-width: 600px;
+}
+
+@media (max-width: 1110px) {
+  h1 {
+    display: none;
+  }
 
   p {
-  display:none ;
-}
+    display: none;
+  }
 
-.caixa-mae {
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 10px;
-  
-}
- .caixa-principal {
-  display:flex ;
-  align-items: center;
-  flex-direction: column;
- }
+  .caixa-mae {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .caixa-principal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
- .logo-mario {
-  margin-top:50px ;
+  .logo-mario {
+    margin-top: 50px;
+  }
 
- }
+  button {
+    margin: 20px 80px 0;
+  }
 
- button {
- margin: 20px 80px 0 ;
- }
+  .imagem-mario-luigi {
+    width: 80vw;
+    height: auto;
+  }
 
-.imagem-mario-luigi{
-  width: 80vw;
-  height: auto;
-}
+  .header img {
+    display: none;
+  }
 
-.header img {
-  display: none;
-}
+  .header {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.header {
-  margin: 20px;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-}
+  .header a {
+    font-size: 20px;
+  }
 
-.header a {
-  font-size: 20px;
-}
-
-.formulario-fale-conosco {
+  .formulario-fale-conosco {
     position: fixed;
     left: -300;
     display: flex;
@@ -229,12 +272,21 @@ h1 {
     gap: 15px;
     padding: 20px;
     border-radius: 30px;
-    
-  
-
-    
   }
-  
-  
 
+  .nossos-servicos {
+    padding: 50px 20px;
+  }
+
+  .nossos-servicos h2 {
+    font-size: 24px;
+  }
+
+  .nossos-servicos ul {
+    font-size: 16px;
+  }
+
+  .nossos-servicos p {
+    font-size: 14px;
+  }
 }

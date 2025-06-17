@@ -14,12 +14,12 @@
         src="./assets/logo-header.png"
         alt="imagem header"
       />
-      <a>Home</a>
-      <a>Nossos Serviços</a>
-      <a> Fale Conosco</a>
+      <a href="#">Home</a>
+      <a href="#servicos">Nossos Serviços</a>
+      <a onclick="mostrarFormulario()"> Fale Conosco</a>
     </div>
     <div class="caixa-mae">
-      <div class="caixa-pincipal">
+      <div class="caixa-principal">
         <img class="logo-mario" src="assets/logo.png" alt="Logo Mario" />
         <h1>🔧 Encanadores Mario & Luigi - Resolvendo Seus Problemas 🔧</h1>
         <p>
@@ -40,6 +40,20 @@
         />
       </div>
     </div>
+    <section id="servicos" class="nossos-servicos">
+      <h2>Nossos serviços</h2>
+      <ul>
+        <li>Conserto de vazamentos</li>
+        <li>Desentupimento de pias, ralos e vasos</li>
+        <li>Instalação de torneiras, chuveiros e registros</li>
+        <li>Revisão completa de encanamentos</li>
+        <li>Atendimento emergencial 24h</li>
+      </ul>
+      <p>
+        Com a experiência dos irmãos Mario & Luigi, seu lar estará sempre em
+        boas mãos!
+      </p>
+    </section>
     <div class="caixa-video">
       <video src="./assets/video.mp4" autoplay muted loop></video>
       <div class="mascara"></div>
@@ -54,9 +68,10 @@
       class="formulario-fale-conosco"
       action="https://formcarry.com/s/6DmtIDt9WPI"
       method="POST"
-      enctype="multipart/form-data">
-      <input placeholder="Seu nome" type="text" name="nome"/>
-      <input placeholder="Seu telefone" type="tel" name="telefone"/>
+      enctype="multipart/form-data"
+    >
+      <input placeholder="Seu nome" type="text" name="nome" />
+      <input placeholder="Seu telefone" type="tel" name="telefone" />
       <textarea placeholder="Digite seu problema aqui" name="duvida"></textarea>
       <button class="botao" type="submit">Pedir Orçamento</button>
     </form>
