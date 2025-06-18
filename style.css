@@ -1,13 +1,16 @@
+/* Reset básico e ajuste de caixa */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Define altura total do corpo */
 body {
   height: 100vh;
 }
 
+/* Estilização do cabeçalho */
 .header {
   display: flex;
   align-items: center;
@@ -17,13 +20,14 @@ body {
 
 .header img {
   height: 60px;
-  transform: translateX();
+  transform: translateX(0);
 }
 
 .header a {
   color: white;
   cursor: pointer;
   font-size: 24px;
+  text-decoration: none;
 }
 
 .header a:hover {
@@ -32,11 +36,14 @@ body {
   transition: 0.5s ease-in-out;
 }
 
+/* Logo principal */
 .logo-mario {
   height: 200px;
 }
 
-button {
+/* Estilização dos botões */
+button,
+.botao {
   color: aliceblue;
   background-color: rgb(225, 18, 18);
   border-radius: 50px;
@@ -48,20 +55,24 @@ button {
   font-weight: bold;
 }
 
-button:hover {
+button:hover,
+.botao:hover {
   color: rgba(231, 243, 7, 0.995);
   font-size: 15px;
   transition: 0.5s ease-in;
 }
 
-button:active {
+button:active,
+.botao:active {
   opacity: 0.1;
 }
 
+/* Imagem lateral dos irmãos */
 .imagem-mario-luigi {
   height: 500px;
 }
 
+/* Caixa principal do topo */
 .caixa-mae {
   display: flex;
   align-items: center;
@@ -74,18 +85,11 @@ button:active {
   width: 40%;
 }
 
+/* Vídeo de fundo */
 .caixa-video {
   position: fixed;
   top: 0;
   z-index: -1;
-}
-section {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding:100px
-  
 }
 
 video {
@@ -95,16 +99,23 @@ video {
   top: 0;
 }
 
+/* Títulos */
 h1 {
   color: white;
 }
 
+h2 {
+  font-size: 1.2rem;
+}
+
+/* Parágrafos gerais */
 p {
   margin: 10px 0 20px 0;
   font-size: 20px;
   color: white;
 }
 
+/* Máscara escura para o fundo */
 .mascara {
   height: 100%;
   width: 100%;
@@ -118,13 +129,16 @@ p {
   top: 0;
 }
 
+/* Botão do WhatsApp flutuante */
 .link-whatsaap {
   height: 60px;
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 9999; /* Garante que fique sobreposto ao conteúdo */
 }
 
+/* Formulário de contato */
 .formulario-fale-conosco {
   background-color: white;
   display: flex;
@@ -135,7 +149,12 @@ p {
   left: -300px;
   padding: 20px;
   border-radius: 30px;
-  transition: left 1s ease-in-out; /* Transição para o formulario aparecer devagar */
+  transition: left 1s ease-in-out;
+  z-index: 10;
+}
+
+.botao {
+  margin: auto;
 }
 
 input {
@@ -144,6 +163,7 @@ input {
   border: 2px solid blue;
   padding-left: 5px;
   outline-color: green;
+  color: black;
 }
 
 textarea {
@@ -151,25 +171,12 @@ textarea {
   height: 100px;
   border-radius: 15px;
   border: 2px solid blue;
-  padding-left: 5px;
   padding: 10px;
   color: black;
   outline-color: green;
 }
 
-.botao {
-  color: aliceblue;
-  background-color: rgb(225, 18, 18);
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  width: 200px;
-  height: 50px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-inline: auto;
-}
-
+/* Máscara de fundo que aparece ao abrir o formulário */
 .mascara-formulario {
   visibility: hidden;
   position: fixed;
@@ -182,111 +189,65 @@ textarea {
     rgba(10, 12, 16, 0.7) 50%,
     rgba(10, 12, 16, 0.99) 85%
   );
-  transition: visibility 1s ease-out; /* faz o formulario sumir devagar quando clicado na tela */
+  transition: visibility 1s ease-out;
 }
 
+/* SEÇÃO: Nossos Serviços */
 .nossos-servicos {
   color: white;
-  padding: 100px 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 40px 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  margin: 50px auto 30px auto; /* margem reduzida para subir acima do WhatsApp */
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
   text-align: center;
-  gap: 20px;
 }
 
 .nossos-servicos h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 0 #e11212;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .nossos-servicos ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   list-style: none;
   padding: 0;
-  font-size: 20px;
-  line-height: 2;
+  margin-bottom: 20px;
+  cursor: pointer;
+  grid-auto-rows: 120px; /* força altura igual entre os itens */
 }
 
-.nossos-servicos li::before {
-  content: "🔧 ";
+.nossos-servicos li {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(4px);
+  min-height: 120px; /* garante que todos tenham mesma altura */
+}
+
+.nossos-servicos li:hover {
+  background-color: rgba(225, 18, 18, 0.7);
+  transform: scale(1.05);
 }
 
 .nossos-servicos p {
-  font-size: 18px;
-  max-width: 600px;
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+  font-weight: bold;
 }
 
-@media (max-width: 1110px) {
-  h1 {
-    display: none;
-  }
 
-  p {
-    display: none;
-  }
-
-  .caixa-mae {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 10px;
-  }
-  .caixa-principal {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .logo-mario {
-    margin-top: 50px;
-  }
-
-  button {
-    margin: 20px 80px 0;
-  }
-
-  .imagem-mario-luigi {
-    width: 80vw;
-    height: auto;
-  }
-
-  .header img {
-    display: none;
-  }
-
-  .header {
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .header a {
-    font-size: 20px;
-  }
-
-  .formulario-fale-conosco {
-    position: fixed;
-    left: -300;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    border-radius: 30px;
-  }
-
-  .nossos-servicos {
-    padding: 50px 20px;
-  }
-
-  .nossos-servicos h2 {
-    font-size: 24px;
-  }
-
-  .nossos-servicos ul {
-    font-size: 16px;
-  }
-
-  .nossos-servicos p {
-    font-size: 14px;
-  }
-}
