@@ -15,6 +15,12 @@ function esconderFormulario(){
     mascara.style.visibility = "hidden"
 }
 
- 
+ function voltarAoTopo() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
 
   
