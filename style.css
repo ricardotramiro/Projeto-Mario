@@ -1,16 +1,15 @@
-/* Reset básico e ajuste de caixa */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Define altura total do corpo */
+/* Altura mínima para ocupar toda a tela */
 body {
   height: 100vh;
 }
 
-/* Estilização do cabeçalho */
+/* Cabeçalho */
 .header {
   display: flex;
   align-items: center;
@@ -20,7 +19,6 @@ body {
 
 .header img {
   height: 60px;
-  transform: translateX(0);
 }
 
 .header a {
@@ -41,7 +39,7 @@ body {
   height: 200px;
 }
 
-/* Estilização dos botões */
+/* Botões gerais */
 button,
 .botao {
   color: aliceblue;
@@ -67,12 +65,12 @@ button:active,
   opacity: 0.1;
 }
 
-/* Imagem lateral dos irmãos */
+/* Imagem Mario e Luigi */
 .imagem-mario-luigi {
   height: 500px;
 }
 
-/* Caixa principal do topo */
+/* Seção inicial com logo + texto */
 .caixa-mae {
   display: flex;
   align-items: center;
@@ -108,14 +106,14 @@ h2 {
   font-size: 1.2rem;
 }
 
-/* Parágrafos gerais */
+/* Parágrafos */
 p {
   margin: 10px 0 20px 0;
   font-size: 20px;
   color: white;
 }
 
-/* Máscara escura para o fundo */
+/* Máscara escura do fundo */
 .mascara {
   height: 100%;
   width: 100%;
@@ -129,13 +127,13 @@ p {
   top: 0;
 }
 
-/* Botão do WhatsApp flutuante */
+/* Ícone flutuante do WhatsApp */
 .link-whatsaap {
   height: 60px;
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 9999; /* Garante que fique sobreposto ao conteúdo */
+  z-index: 9999;
 }
 
 /* Formulário de contato */
@@ -151,10 +149,6 @@ p {
   border-radius: 30px;
   transition: left 1s ease-in-out;
   z-index: 10;
-}
-
-.botao {
-  margin: auto;
 }
 
 input {
@@ -176,7 +170,7 @@ textarea {
   outline-color: green;
 }
 
-/* Máscara de fundo que aparece ao abrir o formulário */
+/* Fundo escuro que aparece ao abrir o formulário */
 .mascara-formulario {
   visibility: hidden;
   position: fixed;
@@ -192,13 +186,13 @@ textarea {
   transition: visibility 1s ease-out;
 }
 
-/* SEÇÃO: Nossos Serviços */
+/* SEÇÃO - Nossos Serviços */
 .nossos-servicos {
   color: white;
   padding: 40px 80px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
-  margin: 50px auto 30px auto; /* margem reduzida para subir acima do WhatsApp */
+  margin: 60px auto 100px auto; /* margem inferior aumentada */
   max-width: 900px;
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
   text-align: center;
@@ -221,7 +215,7 @@ textarea {
   padding: 0;
   margin-bottom: 20px;
   cursor: pointer;
-  grid-auto-rows: 120px; /* força altura igual entre os itens */
+  grid-auto-rows: 120px;
 }
 
 .nossos-servicos li {
@@ -235,7 +229,7 @@ textarea {
   justify-content: center;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(4px);
-  min-height: 120px; /* garante que todos tenham mesma altura */
+  min-height: 120px;
 }
 
 .nossos-servicos li:hover {
@@ -250,6 +244,7 @@ textarea {
   font-weight: bold;
 }
 
+/* Botão flutuante para voltar ao topo */
 .botao-voltar-topo {
   position: fixed;
   bottom: 30px;
@@ -262,8 +257,10 @@ textarea {
   cursor: pointer;
   font-size: 16px;
   z-index: 1000;
-  opacity: 0.7;
-  transition: 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease; transform: 0.4s ease;
+
 }
 
 .botao-voltar-topo:hover {
@@ -271,5 +268,9 @@ textarea {
   transform: scale(1.1);
 }
 
-
+/* Mostra o botão quando rolar a página */
+.botao-voltar-topo.mostrar {
+  opacity: 0.8;
+  transform: translateY(0);
+}
 

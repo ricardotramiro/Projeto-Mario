@@ -15,6 +15,7 @@ function esconderFormulario(){
     mascara.style.visibility = "hidden"
 }
 
+// quando clicar no botão ele volta ao topo da tela
  function voltarAoTopo() {
   window.scrollTo({
     top: 0,
@@ -22,5 +23,18 @@ function esconderFormulario(){
   });
 }
 
+// Quando rolar o site pra baixo aparece o botão
+window.addEventListener('scroll', function () {
+  const botao = document.querySelector('.botao-voltar-topo');
+  const secaoServicos = document.querySelector('.nossos-servicos');
+  const posicaoSecao = secaoServicos.getBoundingClientRect();
+
+  // Se a parte superior da seção estiver visível na tela, mostra o botão
+  if (posicaoSecao.top <= window.innerHeight && posicaoSecao.bottom >= 0) {
+    botao.classList.add('mostrar');
+  } else {
+    botao.classList.remove('mostrar');
+  }
+});
 
   
