@@ -273,3 +273,155 @@ textarea {
   transform: translateY(0);
 }
 
+/* Telas muito grandes (monitores largos) */
+@media screen and (min-width: 1200px) {
+  .caixa-principal {
+    width: 35%;
+  }
+}
+
+/* Notebooks / Tablets em paisagem */
+@media screen and (max-width: 1024px) {
+  .caixa-mae {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .imagem-mario-luigi {
+    height: 350px;
+    margin-top: 20px;
+  }
+
+  .caixa-principal {
+    width: 80%;
+  }
+
+  .header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 30px;
+  }
+}
+
+/* Tablets em modo retrato / celulares maiores */
+@media screen and (max-width: 768px) {
+  .caixa-principal {
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header a {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+  .logo-mario {
+    margin-bottom: 30px;
+    height: 150px;
+  }
+
+  .imagem-mario-luigi {
+    margin-bottom: 70px;
+    height: 260px;
+    position: relative;
+  }
+
+  .nossos-servicos {
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 90%; /* em vez de ocupar a tela toda */
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.nossos-servicos h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 0 #e11212;
+}
+
+.nossos-servicos ul {
+  gap: 15px;
+
+}
+
+.nossos-servicos li {
+  font-size: 18px;
+  padding: 15px;
+}
+
+.nossos-servicos p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+  .formulario-fale-conosco {
+    width: 280px;
+    left: calc(-280px + 5px); /* esconde o formulário deixando só 20px visíveis */
+    top: 20%;
+    padding: 15px;
+    transition: left 0.5s ease-in-out;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .botao-voltar-topo {
+    font-size: 14px;
+  }
+
+
+
+  textarea {
+    width: 100%;
+  }
+
+  .botao-voltar-topo {
+    margin: 0 20px 20px;
+    position: relative;
+    font-size: 14px;
+  }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .header img {
+    height: 40px;
+  }
+
+  .logo-mario {
+    height: 120px;
+  }
+
+  .imagem-mario-luigi {
+    height: 200px;
+  }
+
+  .botao,
+  .botao-voltar-topo {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .nossos-servicos {
+    padding: 20px;
+  }
+
+  .nossos-servicos h2 {
+    font-size: 24px;
+  }
+}
