@@ -42,6 +42,7 @@ body {
 /* Botões gerais */
 button,
 .botao {
+  margin: auto;
   color: aliceblue;
   background-color: rgb(225, 18, 18);
   border-radius: 50px;
@@ -246,28 +247,26 @@ textarea {
 
 /* Botão flutuante para voltar ao topo */
 .botao-voltar-topo {
-  position: fixed;
-  bottom: 30px;
-  left: 20px;
-  padding: 10px 20px;
+  margin: 0 25px 25px 25px;
+  color: aliceblue;
   background-color: rgb(225, 18, 18);
-  color: white;
+  border-radius: 50px;
   border: none;
-  border-radius: 30px;
   cursor: pointer;
-  font-size: 16px;
-  z-index: 1000;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.4s ease; transform: 0.4s ease;
-
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+  
 }
-
 .botao-voltar-topo:hover {
   opacity: 1;
   transform: scale(1.1);
+  color: rgba(231, 243, 7, 0.995);
+  font-size: 15px;
+  transition: 0.5s ease-in;
 }
-
 /* Mostra o botão quando rolar a página */
 .botao-voltar-topo.mostrar {
   opacity: 0.8;
