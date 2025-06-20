@@ -35,3 +35,24 @@ window.addEventListener("scroll", function () {
     botao.classList.remove("mostrar");
   }
 });
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // Evita o envio tradicional que recarrega a página
+
+  const data = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: data,
+  })
+    .then((response) => {
+      if (response.ok) {
+        alert("Formulário enviado com sucesso!");
+        esconderFormulario(); // opcional, para esconder o form após enviar
+        window.location.href = "https://ricardotramiro.github.io/Projeto-Mario/";
+      } else {
+        alert("Erro ao enviar o formulário. Tente novamente.");
+      }
+    })
+    .catch(() => alert("Erro na comunicação. Tente mais tarde."));
+});
