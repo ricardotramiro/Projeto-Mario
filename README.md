@@ -19,4 +19,4 @@
 <h3>✨ Destaque especial:</h3>
 <p>Durante o desenvolvimento, utilizei a IA como aliada no meu processo de aprendizagem, me ajudando a entender conceitos com mais clareza e agilidade. 
   Isso reforça como a IA, quando bem utilizada, pode ser uma grande parceira para quem está em transição de carreira e busca evolução constante.</p>
-  <img>
+  <img src=https://github.com/ricardotramiro/Projeto-Mario/blob/main/assets/Capa%20GitHub.png?raw=true>
