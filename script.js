@@ -19,20 +19,19 @@ function esconderFormulario() {
 function voltarAoTopo() {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 }
 
 // Mostrar botão de voltar ao topo somente na seção
-window.addEventListener('scroll', function () {
-  const botao = document.querySelector('.botao-voltar-topo');
-  const secaoServicos = document.querySelector('.nossos-servicos');
+window.addEventListener("scroll", function () {
+  const botao = document.querySelector(".botao-voltar-topo");
+  const secaoServicos = document.querySelector(".nossos-servicos");
   const posicaoSecao = secaoServicos.getBoundingClientRect();
 
   if (posicaoSecao.top <= window.innerHeight && posicaoSecao.bottom >= 0) {
-    botao.classList.add('mostrar');
+    botao.classList.add("mostrar");
   } else {
-    botao.classList.remove('mostrar');
+    botao.classList.remove("mostrar");
   }
 });
-
