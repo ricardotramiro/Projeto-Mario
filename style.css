@@ -394,7 +394,13 @@ textarea {
 }
 
 /* Celulares pequenos */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 659px) {
+  .header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
   h1 {
     font-size: 1.2rem;
   }
