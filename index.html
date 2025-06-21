@@ -8,16 +8,14 @@
   </head>
   <body>
     <div class="mascara-formulario" onclick="esconderFormulario()"></div>
+
     <div class="header">
-      <img
-        class="imagem-header"
-        src="./assets/logo-header.png"
-        alt="imagem header"
-      />
+      <img class="imagem-header" src="./assets/logo-header.png" alt="imagem header" />
       <a>Home</a>
       <a href="#servicos">Nossos Serviços</a>
-      <a onclick="mostrarFormulario()"> Fale Conosco</a>
+      <a onclick="mostrarFormulario()">Fale Conosco</a>
     </div>
+
     <div class="caixa-mae">
       <div class="caixa-principal">
         <img class="logo-mario" src="assets/logo.png" alt="Logo Mario" />
@@ -29,21 +27,16 @@
           Apresentamos a vocês os encanadores mais famosos do Reino dos
           Cogumelos - Mario e Luigi!
         </p>
-
         <button onclick="mostrarFormulario()">Entre em contato</button>
       </div>
       <div>
-        <img
-          class="imagem-mario-luigi"
-          src="./assets/mario.png"
-          alt="Mario e Luigi"
-        />
+        <img class="imagem-mario-luigi" src="./assets/mario.png" alt="Mario e Luigi" />
       </div>
     </div>
+
     <section id="servicos" class="nossos-servicos">
       <h2>Nossos serviços</h2>
       <ul>
-        <!--Add icones para dar mais elegancia -->
         <li>🔧Conserto de vazamentos</li>
         <li>🚿Desentupimento de pias, ralos e vasos</li>
         <li>🛠️Instalação de torneiras, chuveiros e registros</li>
@@ -55,16 +48,17 @@
         boas mãos!
       </p>
     </section>
+
     <div class="caixa-video">
       <video src="./assets/video.mp4" autoplay muted loop></video>
       <div class="mascara"></div>
     </div>
-    <a
-      href="https://wa.me/5511900000000?text=Quero%20falar%20com%20os%20irm%C3%A3os%20Mario%20e%20Luigi!"
-      target="_blank"
-    >
-      <img class="link-whatsaap" src="./assets/whatsapp.png" alt="whatsaap"
-    /></a>
+
+    <a href="https://wa.me/5511900000000?text=Quero%20falar%20com%20os%20irm%C3%A3os%20Mario%20e%20Luigi!" target="_blank">
+      <img class="link-whatsaap" src="./assets/whatsapp.png" alt="whatsapp" />
+    </a>
+
+    <!-- ✅ FORMULÁRIO FUNCIONAL COM REDIRECIONAMENTO -->
     <form
       id="form-contato"
       class="formulario-fale-conosco"
@@ -72,15 +66,19 @@
       method="POST"
       enctype="multipart/form-data"
     >
-     
-      <input placeholder="Seu nome" type="text" name="nome" />
-      <input placeholder="Seu telefone" type="tel" name="telefone" />
-      <textarea placeholder="Digite seu problema aqui" name="duvida"></textarea>
+      <input placeholder="Seu nome" type="text" name="nome" required />
+      <input placeholder="Seu telefone" type="tel" name="telefone" required />
+      <textarea placeholder="Digite seu problema aqui" name="duvida" required></textarea>
+
+      <!-- ✅ Redirecionamento após envio -->
+      <input type="hidden" name="_redirect" value="https://ricardotramiro.github.io/Projeto-Mario/" />
+
       <button class="botao" type="submit">Pedir Orçamento</button>
     </form>
-    <button onclick="voltarAoTopo()" class="botao-voltar-topo">
-      Voltar ao Topo
-    </button>
+
+    <button onclick="voltarAoTopo()" class="botao-voltar-topo">Voltar ao Topo</button>
+
     <script src="script.js"></script>
   </body>
 </html>
+
