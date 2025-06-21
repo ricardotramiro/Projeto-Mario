@@ -14,7 +14,7 @@
 <li>Estilização moderna e responsiva com CSS e media queries</li>
 <li>Implementação de formulário funcional com envio via Formcarry</li>
 <li>Compreensão de seletores, eventos e manipulação de DOM com JavaScript</li>
-<li>Estrutura personalizada da seção “Nossos Serviços”, mostrando minha iniciativa de ir além da proposta original e criação do botão flutuante de "Voltar ao Topo" com exibição condicional via scroll</li>  
+<li>Estrutura personalizada da seção “Nossos Serviços”, mostrando minha iniciativa de ir além da proposta original e criação do botão de "Voltar ao Topo" com exibição condicional via scroll</li>  
 </ul>
 <h3>✨ Destaque especial:</h3>
 <p>Durante o desenvolvimento, utilizei a IA como aliada no meu processo de aprendizagem, me ajudando a entender conceitos com mais clareza e agilidade. 
